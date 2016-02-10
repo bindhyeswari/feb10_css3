@@ -3,8 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', 'Segoe UI', 'Droid Sans', 'Open Sans', 'helvetica';
+            font-weight: 300;
+        }
+
+        div {
+            height: 600px;
+            background-color: #962D3E;
+        }
+
+        div:nth-child(2) {
+            background-color: #979C9C;
+        }
+
+        #my-para:target {
+            background-color: #343642;
+            color: #7d849f;
+            transition: all 500ms ease; /* timing function */
+        }
+
+        body > :not(div) {
+            font-family: 'Courier New';
+        }
+
+        div:empty {
+            width: 300px;
+        }
+
+    </style>
 </head>
 <body>
+
+    <a href="#my-para">Go to paragraph - fragment identifier</a>
+    <div> Manali </div>
+    <div></div>
+    <p id="my-para">This is the target example .... </p>
+    <div></div>
+    <div></div>
 
 </body>
 </html>
