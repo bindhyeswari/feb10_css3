@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clearfix</title>
+    <style>
+
+        div.container > div {
+            height: 100px;
+            width: 100px;
+            background-color: #962D3E;
+            margin: 1em;
+            float: left;
+        }
+
+        div.container {
+            border: 1px solid #7d849f;
+            padding: 1em;
+        }
+
+        /*div.container > div:last-child {
+            background-color: white;
+            height: 2px;
+            margin: 0;
+            float: none;
+            width: auto;
+
+            clear: both;
+        }*/
+
+        /*div.container::after { !* clearfix *!
+            display: block;
+            clear: both;
+            content: '';
+        }*/
+
+        .clearfix::after {
+            display: block;
+            clear: both;
+            content: '';
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container clearfix">
+        <div></div>
+        <div></div>
+        <div></div>
+        <!--<div></div>-->
+    </div>
+
+</body>
+</html>
