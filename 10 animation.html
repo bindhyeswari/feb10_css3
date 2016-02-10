@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation</title>
+    <style>
+
+
+
+        @keyframes color-animate {
+            from {
+                background-color: #962D3E;
+                transform: scale3d(1, 1, 1);
+            }
+            to {
+                background-color: #7d849f;
+                transform: scale3d(1.4, 1.4, 1);
+            }
+        }
+
+        div.square {
+            height: 200px;
+            width: 200px;
+            animation: color-animate 500ms ease infinite alternate;
+            animation-fill-mode: forwards;
+        }
+
+        div.square:hover {
+            animation-play-state: paused;
+
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="square"></div>
+
+</body>
+</html>

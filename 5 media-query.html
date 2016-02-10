@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>media Query</title>
+    <style>
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            color: white;
+            margin: 0;
+            height: 100%;
+            transition: all 500ms ease;
+            font-family: 'Avenir Next';
+            padding: 1em;
+        }
+
+        @media (orientation: portrait) {
+            body {
+                background-color: #7d849f;
+            }
+            body::after {
+                content: 'Orientation is portrait!'
+            }
+        }
+
+        @media (orientation: landscape) {
+            body {
+                background-color: #962D3E;
+            }
+            body::after {
+                content: 'Orientation is landscape!'
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+</body>
+</html>
